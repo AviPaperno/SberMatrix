@@ -1,2 +1,8 @@
-# SberMatrix
-Project for control LED RGB Matrix, using Voice Assistant Salute from Sber
+# Светодиодная матрица управляемая с помощью голосового помощника от Сбер
+
+В данном репозитории, находится проект, позволяющий управлять светодионой матрицей с помощью инструментов Sber.
+
+Проект состоит из двух частей: 
+
+* blynk_matrix - проект для микроконтроллера ESP32
+* svetodiodnaya-matritsa - проект для SmartApp Code

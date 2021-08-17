@@ -1,0 +1,147 @@
+{
+  "project" : {
+    "id" : "svetodiodnaya_matrit-131395-smt",
+    "name" : "svetodiodnaya_matrit-131395-smt",
+    "folder" : "/jaicp"
+  },
+  "settings" : {
+    "language" : "ru",
+    "spellingCorrection" : false,
+    "classificationAlgorithm" : "sts",
+    "timezone" : "UTC",
+    "shared" : false
+  },
+  "intents" : [ {
+    "id" : 208909,
+    "path" : "/Blink",
+    "enabled" : true,
+    "shared" : false,
+    "phrases" : [ {
+      "text" : "Мигание"
+    }, {
+      "text" : "Включи мигание"
+    }, {
+      "text" : "Запусти пигание"
+    }, {
+      "text" : "Гирлянда"
+    } ],
+    "patterns" : [ ]
+  }, {
+    "id" : 208910,
+    "path" : "/StopBlink",
+    "enabled" : true,
+    "shared" : false,
+    "phrases" : [ {
+      "text" : "Останови мигание"
+    }, {
+      "text" : "Стоп"
+    }, {
+      "text" : "Свечение"
+    } ],
+    "patterns" : [ ]
+  }, {
+    "id" : 208911,
+    "path" : "/Off",
+    "enabled" : true,
+    "shared" : false,
+    "phrases" : [ {
+      "text" : "выключи"
+    }, {
+      "text" : "выключение"
+    } ],
+    "patterns" : [ ]
+  }, {
+    "id" : 208912,
+    "path" : "/EnableColor",
+    "enabled" : true,
+    "shared" : false,
+    "phrases" : [ {
+      "text" : "Включи @color"
+    }, {
+      "text" : "Включи @color @image"
+    } ],
+    "patterns" : [ ],
+    "slots" : [ {
+      "name" : "color",
+      "entity" : "color",
+      "required" : false,
+      "prompts" : [ "Какой цвет включить?" ],
+      "array" : false
+    }, {
+      "name" : "image",
+      "entity" : "image",
+      "required" : false,
+      "prompts" : [ ],
+      "array" : false
+    } ]
+  }, {
+    "id" : 208913,
+    "path" : "/ChangeImage",
+    "enabled" : true,
+    "shared" : false,
+    "phrases" : [ {
+      "text" : "Включи @image"
+    }, {
+      "text" : "Покажи @image"
+    } ],
+    "patterns" : [ ],
+    "slots" : [ {
+      "name" : "image",
+      "entity" : "image",
+      "required" : true,
+      "prompts" : [ ],
+      "array" : false
+    } ]
+  } ],
+  "entities" : [ {
+    "entity" : {
+      "id" : 119326,
+      "name" : "color",
+      "enabled" : true,
+      "shared" : false,
+      "type" : "annotation",
+      "priority" : 1,
+      "noSpelling" : false,
+      "noMorph" : false
+    },
+    "records" : [ {
+      "id" : 10932613,
+      "type" : "synonyms",
+      "rule" : [ "Синий", "Синяя", "Синее" ],
+      "value" : "[\n  \"0\",\n  \"0\",\n  \"200\"\n]"
+    }, {
+      "id" : 10932614,
+      "type" : "synonyms",
+      "rule" : [ "Красный", "Красная", "Красное" ],
+      "value" : "[\n  \"200\",\n  \"0\",\n  \"0\"\n]"
+    }, {
+      "id" : 10932615,
+      "type" : "synonyms",
+      "rule" : [ "Зелёный", "Зелёная", "Зелёное" ],
+      "value" : "[\n\"0\",\n\"200\",\n\"0\"\n]"
+    } ]
+  }, {
+    "entity" : {
+      "id" : 119327,
+      "name" : "image",
+      "enabled" : true,
+      "shared" : false,
+      "type" : "annotation",
+      "priority" : 1,
+      "noSpelling" : false,
+      "noMorph" : false
+    },
+    "records" : [ {
+      "id" : 10932616,
+      "type" : "synonyms",
+      "rule" : [ "Сердце", "Сердечко" ],
+      "value" : "1\n"
+    }, {
+      "id" : 10932617,
+      "type" : "synonyms",
+      "rule" : [ "Смайл", "Смайлик" ],
+      "value" : "2"
+    } ]
+  } ],
+  "enabledSystemEntities" : [ "duckling.number", "duckling.time", "duckling.duration", "duckling.phone-number", "duckling.email", "duckling.url" ]
+}

@@ -1,0 +1,28 @@
+name: echo-template
+
+entryPoint:
+  - main.sc
+
+botEngine: v2
+language: ru
+sts:
+  noMatchThreshold: 0.2
+caila:
+  noMatchThreshold: 0.2
+
+scriptsPreLoad:
+  global:
+    - /jslib/moment.min.js
+    - /jslib/underscore.js
+    - /jsapi/common.js
+    - /jsapi/http.js
+  local:
+    - /jsapi/mail.js
+    - /jsapi/reactions.js
+
+tests:
+  include:
+    - test.xml
+    
+injector:
+  TOKEN: YOUR_BLINK_TOKEN
